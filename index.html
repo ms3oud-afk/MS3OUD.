@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS3OUD</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+          <img src="ChatGPT Image 8 avr. 2025, 10_17_45.png" alt="MS3OUD Logo">
+        </div>
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Welcome to MS3OUD</h2>
+            <p>Your solution for quality services.</p>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+    </section>
+<br>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>MS3OUD say: diha fkrk</p>
+    </section>
+        <!-- Services Section -->
+    <section class="services" id="services">
+<br>
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <h3>Helping?</h3>
+                <p>Help u to raise ur Rank</p>
+            </div>
+            <div class="service-card">
+                <h3>Angry? :3
+                <p>We specialize to lift your nerves.</p>
+            </div>
+            <div class="service-card">
+                <h3>Design</h3>
+                <p>Our design team crafts visually stunning and user-friendly interfaces.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/mblgpbkn" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 My Business | All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const heroContent = document.querySelector('.hero-content');
+            heroContent.classList.add('fade-in');
+    
+            setTimeout(() => {
+                heroContent.classList.add('show');
+            }, 100); // slight delay to trigger transition
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const serviceCards = document.querySelectorAll('.service-card');
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('animate');
+                        }, index * 200); // stagger animation
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+    
+            serviceCards.forEach(card => observer.observe(card));
+        });
+    </script>
+    
+</body>
+</html>
